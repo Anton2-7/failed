@@ -1,0 +1,67 @@
+/* Tailwind core */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/* @import "tailwindcss"; */
+
+@import "./config.reui.css";
+
+/* Demos */
+@import "demos/demo1";
+
+/* 1) Базовый стиль для «здоровых» полей: */
+.ant-input.ant-input:not(.ant-input-status-error),
+.ant-input-number.ant-input-number,
+.ant-input-number-input.ant-input-number-input:not(.ant-input-status-error),
+.ant-select-selector.ant-select-selector:not(.ant-input-status-error),
+.input:not(.border-red-500),
+select:not(.ant-input-status-error),
+textarea:not(.ant-input-status-error),
+.multi-select-container.multi-select-container:not(.ant-input-status-error) {
+  border-color: #dbdfe9;
+  border-radius: 6px;
+}
+
+.input:hover {
+  border-color: #dbdfe9 !important;
+  transition: all 0.5s ease !important;
+}
+.ant-input:hover {
+  border-color: #dbdfe9 !important;
+  transition: all 0.5s ease !important;
+}
+.ant-input-number:hover {
+  border-color: #dbdfe9 !important;
+  transition: all 0.5s ease !important;
+}
+.ant-select-selector:hover {
+  border-color: #dbdfe9 !important;
+  transition: all 0.5s ease !important;
+}
+
+/* 2) Перекрытие для состояния «ошибка»: */
+.ant-input-status-error {
+  border-color: red !important;
+}
+.ant-input-status-error:focus,
+.ant-input-status-error:hover {
+  border-color: red !important;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15) !important;
+}
+
+/* 3) Вариант, если используется схема AntD, где у Form.Item 
+   появляется класс .ant-form-item-has-error: */
+.ant-form-item-has-error .ant-input {
+  border-color: red !important;
+}
+.ant-form-item-has-error .ant-input:focus,
+.ant-form-item-has-error .ant-input:hover {
+  border-color: red !important;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15) !important;
+}
+
+/* 4) Если вы при ошибке сами добавляете кастомный класс (например, .error),
+   можно сделать так: */
+.error {
+  border-color: red !important;
+}

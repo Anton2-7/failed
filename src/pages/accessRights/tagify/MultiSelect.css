@@ -1,0 +1,137 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.multi-select-container {
+    margin: 0 auto 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 16px 5px 12px;
+}
+
+label {
+    display: block;
+    /* margin-bottom: 5px; */
+}
+
+.selected-values {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.selected-values::after {
+    content: '';
+    /* Обязательно для псевдоэлемента */
+    display: inline-block;
+    width: 12px;
+    /* Ширина иконки */
+    height: 7px;
+    /* Высота иконки */
+    background-image: url('../../../assets/icons/arrow.svg');
+    /* Путь к SVG */
+    background-size: cover;
+    /* Убедитесь, что иконка масштабируется правильно */
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    /* Плавное изменение */
+    transform: rotate(180deg);
+}
+
+.selected-values.open::after {
+    transform: rotate(360deg);
+}
+
+/* #selected-count {
+    font-weight: bold;
+} */
+
+.clear-button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clear-button:hover {
+    color: #007bff;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e9f5ff;
+    color: #007bff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0%;
+    cursor: pointer;
+}
+
+.tag .close-btn {
+    position: relative;
+    top: -1px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #666;
+    padding: 7px;
+}
+
+.tag .close-btn:hover {
+    color: red;
+}
+
+input[type="text"] {
+    outline: none;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+}
+
+.selected-user-role {
+    margin-top: 16px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FCFCFC;
+}
+
+.checkbox-style {
+    display: flex;
+    align-items: anchor-center;
+    gap: 5px;
+}
+
+.label-text {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: #78829D;
+}
+
+.text {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    letter-spacing: 0%;
+    color: #78829D;
+}
